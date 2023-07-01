@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="db_card_margin">3dp</dimen>
+    <dimen name="db_c_corner">14dp</dimen>
+    <dimen name="db_c_txt_margin">6dp</dimen>
+    <dimen name="db_c_txt_size">18dp</dimen>
+    <dimen name="db_c_txt_suggeston">16dp</dimen>
+    <dimen name="db_c_txt_top_mg">10dp</dimen>
+    <dimen name="stg_left_margin">16dp</dimen>
+    <dimen name="hp_welcome_margin">10dp</dimen>
+    <dimen name="hp_welcome_ts">20dp</dimen>
+    <dimen name="hp_sg_txt">16dp</dimen>
+    <dimen name="hp_sg_pad">8dp</dimen>
+</resources>

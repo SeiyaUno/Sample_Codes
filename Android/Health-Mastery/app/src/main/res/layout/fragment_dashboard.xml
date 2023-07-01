@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recommnedation_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_margin="@dimen/db_card_margin"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/db_c_corner">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/db_c_txt_margin"
+                    android:layout_marginTop="@dimen/db_c_txt_margin"
+                    android:text="What's next?"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/db_c_txt_size" />
+
+                <TextView
+                    android:id="@+id/exerciseSuggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Exercise Suggestion"
+                    android:layout_marginLeft="@dimen/db_c_txt_margin"
+                    android:layout_marginTop="@dimen/db_c_txt_top_mg"
+                    android:textSize="@dimen/db_c_txt_suggeston"/>
+
+                <TextView
+                    android:id="@+id/foodSuggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Food Suggestion"
+                    android:layout_marginLeft="@dimen/db_c_txt_margin"
+                    android:layout_marginTop="@dimen/db_c_txt_top_mg"
+                    android:textSize="@dimen/db_c_txt_suggeston"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="[suggestions goes here. may add activity icons if we have a time,
+                plus progressbar to indicate daily progress]" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/daily_summary_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/db_card_margin"
+            android:layout_weight="2"
+            app:cardCornerRadius="@dimen/db_c_corner">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/db_c_txt_margin"
+                    android:layout_marginTop="@dimen/db_c_txt_margin"
+                    android:text="Summary"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/db_c_txt_size" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="5dp"
+                        android:textSize="16dp"
+                        android:text="Weekly\nProgress"/>
+
+                    <ProgressBar
+                        android:id="@+id/PB_weekly"
+                        android:layout_width="match_parent"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        android:paddingRight="10dp"
+                        android:minHeight="20dp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="List Daily carolie taken so far, Time spent inside/outside,
+    Number of steps, workouts completed" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/db_card_margin"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/db_c_corner">
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</FrameLayout>
