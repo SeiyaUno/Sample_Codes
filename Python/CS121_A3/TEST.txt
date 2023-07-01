@@ -1,0 +1,57 @@
+Poor results
+1: Information and computer science 
+Before - Taking 0.43085 sec to retrieve
+After - Takes 0.1597139835357666 sec after implementation of .txt indexing
+2: Master of software engineering
+Before - Taking 0.4410262107849121 sec, Contained very similar pages in top K result
+After - Takes 0.11862492561340332 sec, Less similar pages after implementation of near page similarity detection 
+3: Information retrieval
+Before - Result seems to have less useful pages
+After - More relevant results after implementation of Important word weighting
+4: Engineering
+Before - The result was mostly dataset for machine learning
+After - More relevant results after important word weighting, similarity detection implemented
+5: Visual computing
+Before - Similar pages dominated the top result
+After - Better results after implementation of similar page detection
+6: Graduate program
+Before - Not relevant results
+After - More relevant after important word weighting
+7: Statistics
+Before - Same page with a variation of urls were the top result
+8: Software Architecture
+Before - Useless result
+After - More relevant results after important word weighting
+9: Data science
+Before - Result contained many similar pages
+After - Less similar pages after similarity detection implemented
+10: Cristina lopes
+Before - Result seems to be irrelevant to the query
+After - More relevant results after additonal methods implemented
+
+Good results
+1: Zoo
+A few relevant pages were in the top K = 20
+Took 0.00335168838500 sec
+2: Mongodb
+All result retrieved
+Took basically 0.0 sec (too small to measure)
+3: Class schedule
+Result seems to be relevant to schedules of some specific classes
+Took 0.0777909
+4: Openlab
+Some of top result seems to contain many word “openlab”
+Took 0.00299191 sec
+5: Python function
+6: Aldrich park
+7: Hadoop
+8: Capstone
+9: History
+10: computer
+
+Improvements we made:
+After we created a basic ranked retrieval search engine, we notice that we have not implemented weighting for important words.
+Moreover, in some queries, the search engine retrieved too many documents for calculation. Thus, it was taking too much time before returning the result to GUI.
+Considering these issues, we modified index to keep counts of important words in postings and added a filter for queries that contain many words.
+We also incorporated simhash in the indexing process so that we do not store similar pages in the index. We specifically used simhash in indexing process to avoid computational overhead during search time.
+We tested the engine again and adjusted the parameter for similarity and important words in score calculation.
